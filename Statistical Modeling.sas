@@ -5,3 +5,4 @@ proc glimmix data=example;
 	model Product_A_selection (event='1') =x1 x2 x3 x4 x5 x6 /dist=binary or solution ;
 run;
 
+/*Add randome effects to the logistic regression*/
