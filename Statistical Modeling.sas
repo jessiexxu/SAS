@@ -1,16 +1,3 @@
-/*Use logistic regression to derive the likelihood of selecting Product A among potential users*/
-
-ods listing close;	
-ods csv file="folder location\example.csv";
-proc glimmix data=example;	
-	class x1 x2 x3 x4 x5 x6;
-	model Product_A_selection (event='1') =x1 x2 x3 x4 x5 x6 /dist=binary solution;
-	random respid pat_id;
-run;
-
-ods csv close;	
-ods listing;
-
 /*Simple linear regression*/
 
    title 'Simple Linear Regression';
@@ -35,3 +22,19 @@ ods listing;
    ods graphics off;
 *Result interpretation: 
 https://support.sas.com/documentation/cdl/en/statug/63033/HTML/default/viewer.htm#statug_reg_sect003.htm;
+
+
+/*Use logistic regression to derive the likelihood of selecting Product A among potential users*/
+
+ods listing close;	
+ods csv file="folder location\example.csv";
+proc glimmix data=example;	
+	class x1 x2 x3 x4 x5 x6;
+	model Product_A_selection (event='1') =x1 x2 x3 x4 x5 x6 /dist=binary solution;
+	random respid pat_id;
+run;
+
+ods csv close;	
+ods listing;
+
+
