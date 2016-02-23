@@ -33,3 +33,5 @@ ods listing;
    run;
    
    ods graphics off;
+*Result interpretation: 
+https://support.sas.com/documentation/cdl/en/statug/63033/HTML/default/viewer.htm#statug_reg_sect003.htm;
